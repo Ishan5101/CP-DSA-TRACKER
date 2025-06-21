@@ -1,0 +1,31 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    int t;
+    cin >> t;  
+   
+
+    while (t--) {
+       int n,x;
+       cin>>n>>x;
+
+       int arr[n];
+       for(int i=0;i<n;i++){
+        cin>>arr[i];
+       }
+
+       int start=0;
+       int ans=-7823;
+
+       for(int i=0;i<n;i++){
+        ans=max(ans,arr[i]-start);
+        start=arr[i];
+       }
+       ans=max(ans,2*(x-arr[n-1]));
+
+       cout<<ans<<endl;
+    }
+
+    return 0;
+}
