@@ -1,0 +1,42 @@
+//walking_master.cpp
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+    int t;
+    cin >> t;
+
+    while (t--) {
+       int a, b, c, d;
+        cin >> a >> b >> c >> d;
+
+       
+        if (d < b) {
+            cout << -1 << endl;
+            continue;
+        }
+
+        long long steps = 0;
+
+     
+        while (b < d) {
+            a++;
+            b++;
+            steps++;
+        }
+
+      
+        if (a < c) {
+            cout << -1 << endl;
+            continue;
+        }
+
+      
+        while (a > c) {
+            a--;
+            steps++;
+        }
+
+        cout << steps << endl;
+    }
+}
